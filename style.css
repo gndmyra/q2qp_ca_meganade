@@ -1,0 +1,302 @@
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    animation: load 1.3s;
+}
+
+@keyframes load{
+    from{
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX('0');
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    padding-bottom: 90vh;
+}
+
+section{
+    width: 100%;
+    height: auto;
+}
+
+article{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+}
+
+/*-navbar-*/
+
+.logo img{
+    border-radius: 360px;
+    width: 30px;
+}
+
+.title{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #072745;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.links a{
+    margin-right: 4vw;
+}
+
+.links a:hover{
+    font-size: large;
+    transition: 0.5s;
+    background-color: #050d29;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/*HOME*/
+
+/*--banner--*/
+
+#video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    display: block;
+}
+
+.content{
+    width:100%;
+    margin-top: 25%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 0;
+}
+
+.content img{
+    width: 12vw;
+    border-radius: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header1 h1{
+    text-align: center;
+    text-shadow: -1px 1px 0 #000, 6px 6px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+.content p{
+    text-align: center;
+    margin-top: 1%;
+    font-size: medium;
+    font-family: 'roboto', sans-serif;
+    font-weight: 900;
+}
+
+/*--paragraphs and headers of articles--*/
+
+article h1{
+    font-family: 'oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
+article p{
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 1vh 3vw 3vw 0;
+}
+
+article h2{
+    font-family: 'oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    margin-top: 5vh;
+}
+
+
+/*accomplishments*/
+
+.accomplishments{
+    display: flex;
+}
+
+.accomplishments img{
+    width: 20vw;
+    margin-left: 2.15vw;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -90vh;
+}
+
+/*iframe settings*/
+
+iframe{
+    border: none;
+    overflow: auto;
+    margin: auto;
+    display: block;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+/*for 2 columns*/
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column img{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*for social media accounts*/
+
+.icons{
+    background: url(images/sprite.png) 0 0;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+    border-radius: 360px;
+    margin: 2vw;
+}
+
+#facebook{
+    background-position: -439px -146px;
+}
+
+#twitter{
+    background-position: -66px -72px;
+}
+
+#instagram{
+    background-position: -290px -221px;
+}
+
+.socmed{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        position: relative;
+    }
+
+    .title{
+        padding: 1vw;
+    }
+
+    .links{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        background-color: #050d29;
+    }
+
+    .links a{
+        padding: 12px 16px;
+        display: block;
+        color: white;
+    }
+
+    .links a:hover{
+        background-color: #072745;
+    }
+
+    nav:hover .links{
+        display: block;
+    }
+
+    article h1{
+        text-align: center;
+    }
+
+    article h2{
+        text-align: center;
+    }
+
+    article p{
+        text-align: center;
+    }
+
+    iframe{
+        width: 80%;
+    }
+
+    .column{
+        width: 100%;
+    }
+
+}
+
